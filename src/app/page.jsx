@@ -3,9 +3,9 @@ import Image from "next/image";
 import Hero from "public/avtar.png";
 import styles from "./page.module.scss";
 import Categories from "@/components/category/page";
-import Slide from "@/components/slide/page";
+import Slide from "@/components/slide/Slide";
 import Inlestsky from "@/components/inlestsky/page";
-import SlideAuto from "@/components/slideauto/page";
+import SlideAuto from "@/components/slideAuto/SlideAuto";
 export default function Home() {
   return (
     <div>

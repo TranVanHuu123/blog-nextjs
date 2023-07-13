@@ -1,10 +1,10 @@
 import React from "react";
-import Slide from "../slide/page";
+import Slide from "../slide/Slide";
 
 const Inlestsky = () => {
   return (
     <div className="Rectangle138 w-full p-3 h-[706px] bg-slate-800 bg-opacity-30 rounded-[25px] backdrop-blur-2xl">
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <div className="Frame573 w-full flex justify-center items-center md:w-[746px] h-[200px] relative">
           <div className="SearchAndGeocodingIsTiedToEverythingWeBuildMapsNavigationArAndUnderliesEveryAppThatHelpsHumansExploreTheirWorld w-full md:w-[746px] left-0 top-[136px] absolute text-center text-gray-400 text-[10px] md:text-xl font-normal leading-loose">
             Search and geocoding is tied to everything we build — maps,
