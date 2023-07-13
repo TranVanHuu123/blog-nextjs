@@ -21,8 +21,8 @@ export async function generateMetadata({ params }) {
     description: post.desc,
   };
 }
-
-const BlogPost = async ({ params }) => {
+export default async function BlogPost({ params }) {
+  // const BlogPost = async ({ params }) => {
   const data = await getData(params.id);
   return (
     <div className={styles.container}>
@@ -56,6 +56,6 @@ const BlogPost = async ({ params }) => {
       </div>
     </div>
   );
-};
+}
 
-export default BlogPost;
+// export default BlogPost;

@@ -6,7 +6,9 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 import styles from "./page.module.scss";
-const Dasboard = () => {
+
+export default function Dasboard() {
+  // const Dasboard = () => {
   // const [data, setData] = useState([]);
   // const [err, setErr] = useState(false);
   // const [isLoading, setIsLoading] = useState(false);
@@ -121,6 +123,6 @@ const Dasboard = () => {
       </div>
     );
   }
-};
+}
 
-export default Dasboard;
+// export default Dasboard;
