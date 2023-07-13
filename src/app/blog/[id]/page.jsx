@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import styles from "./styles.module.scss";
 import { notFound } from "next/navigation";
 async function getData(id) {
