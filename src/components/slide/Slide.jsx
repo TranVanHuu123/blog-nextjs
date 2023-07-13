@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import Image from "next/image";
 const Slide = () => {

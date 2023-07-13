@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
 import { notFound } from "next/navigation";
 async function getData(id) {
   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {

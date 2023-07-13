@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import useSWR from "swr";
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
 
 export default function Dasboard() {
   // const Dasboard = () => {

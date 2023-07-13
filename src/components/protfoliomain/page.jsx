@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
 const PortfolioMain = () => {
   return (
     <div className=" mb-4  mt-11 w-full  h-[739px] md:h-[899px] relative">
