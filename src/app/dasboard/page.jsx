@@ -37,6 +37,7 @@ const Dasboard = () => {
     if (session.status === "unauthenticated") {
       router?.push("/dasboard/login");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, mutate, error, isLoading } = useSWR(
