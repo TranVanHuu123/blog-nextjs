@@ -1,25 +1,29 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
+import useSWR from "swr";
 
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/posts", {
-    cache: "no-store",
-  });
+// async function getData() {
+//   const res = await fetch("http://localhost:3000/api/posts", {
+//     cache: "no-store",
+//   });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
 
-  return res.json();
-}
-const Categories = async () => {
-  const data = await getData();
+//   return res.json();
+// }
+const Categories = () => {
+  // const data = await getData();
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const { data, mutate, error, isLoading } = useSWR("/api/posts", fetcher);
 
   return (
     <div className={` ${styles.mainContainer} `}>
-      {data.map((item) => (
+      {data?.map((item) => (
         <Link
           href={`/blog/${item._id}`}
           className={`flex  mt-[100px] gap-[50px] flex-1 ${styles.container}`}
