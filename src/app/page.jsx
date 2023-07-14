@@ -1,12 +1,11 @@
-import React from "react";
 import Button from "@/components/button/Button";
-import Image from "next/image";
-import Hero from "public/avtar.png";
-import styles from "./styles.module.scss";
 import Categories from "@/components/category/page";
-import Slide from "@/components/slide/Slide";
 import Inlestsky from "@/components/inlestsky/page";
 import SlideAuto from "@/components/slideAuto/SlideAuto";
+import Image from "next/image";
+import React from "react";
+import styles from "./styles.module.scss";
+
 export default function Home() {
   return (
     <div>
@@ -20,10 +19,10 @@ export default function Home() {
             global tech industry.
           </p>
           <div className="hidden md:block">
-            <Button className="" url="/portfolio" text="See Our Works" />
+            <Button url="/portfolio" text="See Our Works" />
           </div>
         </div>
-        <div className={`flex-1 ${styles.item}`}>
+        {/* <div className={`flex-1 ${styles.item}`}>
           <Image
             src={Hero}
             alt="hero"
@@ -31,12 +30,14 @@ export default function Home() {
             width="100%"
             height={500}
           />
-        </div>
+        </div> */}
       </div>
       <div>
         <SlideAuto></SlideAuto>
       </div>
-      <Categories></Categories>
+      <div>
+        <Categories></Categories>
+      </div>
       <div className="mt-28">
         <Inlestsky></Inlestsky>
       </div>
