@@ -1,5 +1,4 @@
 "use client";
-
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -35,12 +34,7 @@ export default function Dasboard() {
   const session = useSession();
 
   const router = useRouter();
-  useEffect(() => {
-    if (session.status === "unauthenticated") {
-      router?.push("/dasboard/login");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, mutate, error, isLoading } = useSWR(
     `/api/posts?username=${session?.data?.user.name}`,
@@ -85,6 +79,10 @@ export default function Dasboard() {
       console.log(err);
     }
   };
+
+  if (session.status === "unauthenticated") {
+    router?.push("/dasboard/login");
+  }
 
   if (session.status === "authenticated") {
     return (
